@@ -42,11 +42,13 @@ public class Main {
         matchReports.add(new Message("Ajax", MatchEventType.RED_CARD));
         matchReports.add(new Message("Ajax", MatchEventType.SCHWALBE));
         matchReports.add(new Message("Ajax", MatchEventType.PENALTY));
-        matchReports.add(new Message("Feyenoord", MatchEventType.RED_CARD));
+        matchReports.add(new Message("Ajax", MatchEventType.CORNER));
+        matchReports.add(new Message("Feyenoord", MatchEventType.GOAL));
         matchReports.add(new Message("Feyenoord", MatchEventType.YELLOW_CARD));
+        matchReports.add(new Message("Feyenoord", MatchEventType.RED_CARD));
         matchReports.add(new Message("Feyenoord", MatchEventType.SCHWALBE));
         matchReports.add(new Message("Feyenoord", MatchEventType.PENALTY));
-        matchReports.add(new Message("Feyenoord", MatchEventType.GOAL));
+        matchReports.add(new Message("Feyenoord", MatchEventType.CORNER));
 
         return matchReports;
     }
