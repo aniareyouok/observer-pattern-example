@@ -16,11 +16,14 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Observer ajaxSupporter = new SupporterObserver("Ajax");
         Observer feyenoordSupporter = new SupporterObserver("Feyenoord");
+        Observer ajaxHooligan = new SupporterObserver("Ajax");
 
         Subject match = new MatchSubject();
 
         match.attach(ajaxSupporter);
         match.attach(feyenoordSupporter);
+        match.attach(ajaxHooligan);
+        match.attach(feyenoordHooligan);
 
         for(int i = 0; i <= 90; i = i + 5) {
             match.notifyUpdate(pickRandomMessage());
