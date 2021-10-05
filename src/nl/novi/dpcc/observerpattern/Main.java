@@ -2,6 +2,7 @@ package nl.novi.dpcc.observerpattern;
 
 import nl.novi.dpcc.observerpattern.domain.MatchEventType;
 import nl.novi.dpcc.observerpattern.domain.Message;
+import nl.novi.dpcc.observerpattern.observer.BoardObserver;
 import nl.novi.dpcc.observerpattern.observer.Observer;
 import nl.novi.dpcc.observerpattern.observer.SupporterObserver;
 import nl.novi.dpcc.observerpattern.subject.MatchSubject;
@@ -18,6 +19,7 @@ public class Main {
         Observer feyenoordSupporter = new SupporterObserver("Feyenoord");
         Observer ajaxHooligan = new SupporterObserver("Ajax");
         Observer feyenoordHooligan = new SupporterObserver("Feyenoord");
+        Observer scoreBoard = new BoardObserver();
 
         Subject match = new MatchSubject();
 
@@ -25,11 +27,13 @@ public class Main {
         match.attach(feyenoordSupporter);
         match.attach(ajaxHooligan);
         match.attach(feyenoordHooligan);
+        match.attach(scoreBoard);
 
         for(int i = 0; i <= 90; i = i + 5) {
             match.notifyUpdate(pickRandomMessage());
-            Thread.sleep(5000);
+            Thread.sleep(500);
         }
+        match.notifyUpdate(new Message("Ajax", MatchEventType.MATCH_END));
     }
 
     private static Message pickRandomMessage() {

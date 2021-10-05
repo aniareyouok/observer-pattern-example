@@ -6,5 +6,6 @@ public enum MatchEventType {
     PENALTY,
     YELLOW_CARD,
     RED_CARD,
-    CORNER
+    CORNER,
+    END
 }
