@@ -1,12 +1,16 @@
 package nl.novi.dpcc.observerpattern.observer;
 
-import nl.novi.dpcc.observerpattern.domain.MatchEventType;
+import nl.novi.dpcc.observerpattern.domain.MatchStatistics;
+import nl.novi.dpcc.observerpattern.domain.Message;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import static nl.novi.dpcc.observerpattern.domain.MatchEventType.END;
 
 public class BoardObserver implements Observer {
 
     private final Map<String, MatchStatistics> teams = new LinkedHashMap<>();
+
 
 
     public void update(Message message) {
