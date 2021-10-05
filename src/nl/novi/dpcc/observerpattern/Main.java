@@ -27,7 +27,7 @@ public class Main {
         match.attach(feyenoordHooligan);
 
         for(int i = 0; i <= 90; i = i + 5) {
-            match.notifyUpdate(pickRandomMessage());
+            match.notifyUpdate(pickRandomMessage());a
             Thread.sleep(5000);
         }
     }
