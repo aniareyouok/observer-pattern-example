@@ -17,6 +17,7 @@ public class Main {
         Observer ajaxSupporter = new SupporterObserver("Ajax");
         Observer feyenoordSupporter = new SupporterObserver("Feyenoord");
         Observer ajaxHooligan = new SupporterObserver("Ajax");
+        Observer feyenoordHooligan = new SupporterObserver("Feyenoord");
 
         Subject match = new MatchSubject();
 

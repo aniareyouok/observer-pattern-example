@@ -16,7 +16,7 @@ public  class SupporterObserver implements Observer {
         MatchEventType eventType = message.getMatchEventType();
 
         StringBuilder sb = new StringBuilder("The ").append(favouriteClub).append("-crowd ");
-        StringBuilder sb2 = new StringBuilder("The ").append(favouriteClub).append("-hooligans");
+        StringBuilder sb2 = new StringBuilder("The ").append(favouriteClub).append("-hooligans ");
 
         if(favouriteClub.equalsIgnoreCase(clubname)) {
             sb.append(crowdReactionOwnTeam(eventType));
